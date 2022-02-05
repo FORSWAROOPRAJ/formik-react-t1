@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
@@ -15,8 +15,7 @@ function AddStudents() {
 
         name: Yup.string().required("Name required"),
 
-        email: Yup.string().email('Invalid Email').
-            required('Email Required'),
+        email: Yup.string().email('Invalid Email').required('Email Required'),
 
         mobile: Yup.string().matches(/^\d{10}$/, "Mobile number not valid")
             .required(' Mobile Required'),
